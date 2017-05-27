@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+
+
+    <style type="text/css">
+        /*登录框位置*/
+        .login-page {
+            width: 360px;
+            padding: 8% 0 0;
+            margin: 0 auto;
+        }
+
+        .form {
+            border-radius: 15px;
+            position: relative;
+            z-index: 1;
+            background: #FFFFFF;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        .form .message {
+            margin: 15px 0 0;
+            color: #b3b3b3;
+            font-size: 12px;
+        }
+
+        .form .message a {
+            color: #4CAF50;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .form .register-form {
+            display: none;
+        }
+
+        .form input {
+            border-radius: 15px;
+            font-family: "Roboto", sans-serif;
+            /*轮廓*/
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .form button {
+            border-radius: 15px;
+            font-family: "Microsoft YaHei", "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #4CAF50;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            /*把鼠标变成手的形状*/
+            cursor: pointer;
+        }
+
+        .form button:active {
+            width: 255px;
+        }
+
+        .form button:hover {
+            background: #000000;
+        }
+
+        .form button:active, .form button:focus {
+            background: #43A047;
+        }
+
+        #container {
+            text-align: center;
+        }
+
+        #userTypeCheckbox {
+            margin-bottom: 15px;
+            text-align: center;
+            display: none;
+
+        }
+
+        #flod {
+            font-size: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .elf {
+            text-align: center;
+            margin: auto;
+            background: #000000;
+            height: 48px;
+            width: 100px;
+            border-radius: 45px 45px 0 0;
+            position: relative;
+            top: 49px;
+            /*display: none;*/
+            transition: all 0.3s;
+            z-index: -111;
+
+        }
+
+        @keyframes shup {
+            0% {
+                top: 49px;
+            }
+            50% {
+                top: 5px;
+            }
+            70% {
+                top: -16px
+            }
+            80% {
+                top: 5px;
+            }
+            90% {
+                top: -16px
+            }
+            100% {
+                top: 5px;
+            }
+
+        }
+
+        .elffocur {
+            animation: shup 0.5s;
+            top: 5px !important;
+        }
+
+        .eye {
+            background: #fff;
+            height: 25px;
+            width: 20px;
+            transition: all 0.2s ease;
+            border-radius: 17px 17px 15px 15px;
+            display: inline-block;
+        }
+
+        .face {
+            position: relative;
+            top: 13px;
+        }
+
+        .mid {
+            width: 8px;
+            display: inline-block;
+        }
+
+        .pupli {
+            position: relative;
+            width: 14px;
+            height: 14px;
+            background: #000;
+            border-radius: 15px;
+            top: 6px;
+            left: 3px;
+            transition: all 0.3s;
+        }
+
+        .pupli-move {
+            top: 12px
+        }
+
+        .eye2 {
+            height: 25px;
+            width: 20px;
+            transition: all 0.2s;
+
+            display: inline-block;
+        }
+
+        .pupliJi1 {
+            display: inline-block;
+            transition: all 0.2s ;
+            position: relative;
+            width: 20px;
+            height: 5px;
+            background: #fff;
+            border-radius: 1px;
+        }
+
+        .pupliJi2 {
+            display: inline-block;
+            transition: all 0.2s ;
+            position: relative;
+            width: 20px;
+            height: 5px;
+            background: #fff;
+            border-radius: 1px;
+        }
+
+        .lower1 {
+            display: inline-block;
+            transition: all 0.2s ;
+            position: relative;
+            width: 20px;
+            height: 5px;
+            background: #fff;
+            border-radius: 1px;
+            top: -21.8px;
+        }
+
+        .lower2 {
+            display: inline-block;
+            transition: all 0.2s ;
+            position: relative;
+            width: 20px;
+            height: 5px;
+            background: #fff;
+            border-radius: 1px;
+            top: -21.8px;
+        }
+
+        .isactive1 {
+            -webkit-transform: rotate(15deg);
+            -moz-transform: rotate(15deg);
+            -ms-transform: rotate(15deg);
+            -o-transform: rotate(15deg);
+            transform: rotate(15deg);
+            top: -2.5px
+        }
+
+        .isactive2 {
+            -webkit-transform: rotate(15deg);
+            -moz-transform: rotate(15deg);
+            -ms-transform: rotate(15deg);
+            -o-transform: rotate(15deg);
+            transform: rotate(-15deg);
+            top: -20px;
+        }
+
+        .isactive3 {
+            -webkit-transform: rotate(15deg);
+            -moz-transform: rotate(15deg);
+            -ms-transform: rotate(15deg);
+            -o-transform: rotate(15deg);
+            transform: rotate(-15deg);
+            top: -2.5px;
+        }
+
+        .isactive4 {
+            -webkit-transform: rotate(15deg);
+            -moz-transform: rotate(15deg);
+            -ms-transform: rotate(15deg);
+            -o-transform: rotate(15deg);
+            transform: rotate(15deg);
+            top: -20px;
+        }
+
+    </style>
+
+
+    <link rel="stylesheet" href="js/lib/emailAutoComplete/autoEmail.css">
+    <link rel="stylesheet" href="js/lib/multi-switch/multi-switch.min.css">
+    <link rel="stylesheet" href="css/baseStyle.css">
+</head>
+
+
+<body>
+
+<div id="container">
+    <div id="wrapper" class="login-page">
+        <h1>CycleTwo</h1>
+        <!--登录注册页面-->
+        <div id="login_form" class="form">
+            <!--登录表单-->
+            <form class="login-form">
+
+                <div id="login_form_username" class="autoContent parentCls">
+                    <div class="elf">
+                        <div class="face">
+                            <div class="eye">
+                                <div class="pupli"></div>
+                            </div>
+                            <div class="mid"></div>
+                            <div class="eye">
+                                <div class="pupli"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<input type="text" placeholder="用户名" name="username" class="inputElem">-->
+                    <input type="text" placeholder="用户名" name="username" class="">
+                </div>
+
+                <div id="login_form_password">
+                    <div class="elf">
+                        <div class="face">
+                            <div class="eye2">
+                                <div class="pupliJi1"></div>
+                                <div class="lower1"></div>
+                            </div>
+                            <div class="mid"></div>
+                            <div class="eye2">
+                                <div class="pupliJi2"></div>
+                                <div class="lower2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="password" placeholder="密码" name="password">
+                </div>
+
+                <div id="flodbox">
+                    <a id="flod">︾</a>
+                </div>
+
+                <div id="userTypeCheckbox">
+                    <p>车辆管理员</p>
+                    <input type="checkbox" name="userType" id="checkinput" class="multi-switch" value="1"/>
+                </div>
+
+                <div id="login_form_login">
+                    <button type="button" id="login">登　录</button>
+                    <p class="message">还没有账户? <a>立刻创建</a></p>
+                </div>
+            </form>
+            <!--注册表单-->
+            <form class="register-form">
+
+                <div id="register_form_username">
+                    <input type="text" placeholder="用户名" name="username">
+                    <p style="display: none" class="warm"></p>
+                </div>
+
+                <div id="register_form_password">
+                    <input type="password" placeholder="密码" name="password">
+                    <p style="display: none" class="warm"></p>
+                </div>
+
+                <div id="register_form_repwd">
+                    <input type="password" placeholder="重复密码" name="repwd">
+                    <p style="display: none" class="warm"></p>
+                </div>
+
+
+                <div id="register_form_mphone">
+                    <input type="tel" placeholder="手机号" name="mphone">
+                    <p style="display: none" class="warm"></p>
+                </div>
+
+                <div id="register_form_email" class="autoContent parentCls">
+                    <input type="email" placeholder="邮箱" name="email" class="inputElem">
+                    <p style="display: none" class="warm"></p>
+                </div>
+
+                <div id="register_form_create">
+                    <button type="button" id="create">创　建</button>
+                    <p class="message">已经有了一个账户? <a>立刻登录</a></p>
+                    <button type="reset" id="resetbtn" style="display: none">重置</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script src="js/jquery-3.2.1.js"></script>
+<!-- 自动补全邮箱 -->
+<script src="js/lib/emailAutoComplete/emailAutoComplete.js"></script>
+<!-- checkbox 开关 -->
+<script src="js/lib/multi-switch/multi-switch.js"></script>
+<script src="js/lib/layui/lay/dest/layui.all.js"></script>
+<script src="js/basicUtil.js"></script>
+<script src="js/index.js"></script>
+
+
+</html>

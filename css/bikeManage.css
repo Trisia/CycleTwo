@@ -1,0 +1,315 @@
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.col-class {
+    width: 15%;
+}
+
+.customer-table {
+    margin: auto;
+    border-radius: 15px;
+    width: 98%;
+}
+
+.content {
+    border-radius: 15px;
+    margin: 10px auto 0;
+
+    /*height: 100%;*/
+    width: 70%;
+    background-color: #faf1f2;
+}
+
+#pagingbox {
+    text-align: center;
+    height: 5%;
+}
+
+.layui-laypage :first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.layui-laypage *:last-child {
+    border-radius: 0 15px 15px 0 !important;
+}
+
+.layui-laypage em {
+    border-radius: 15px 15px 15px 15px !important;
+
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+}
+
+#headbox {
+    height: 9%;
+}
+
+#resizetablebox {
+    height: 90%;
+    width: 100%;
+}
+
+.modal {
+    text-align: center;
+
+    border-radius: 15px !important;
+}
+
+.bikeInfoTable {
+
+    background: #4d4d4d;
+    transition: all 0.3s ease 0s;
+}
+
+.bikeInfoTable:hover {
+    background: #09b2c6;
+    transition: all 0.3s ease 0s;
+}
+
+.infobox {
+    background: #fff;
+}
+
+.btn-full {
+    border-radius: 15px;
+
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+
+    border: 0;
+    padding: 7px;
+    color: #FFFFFF;
+    font-size: 14px;
+
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    /*把鼠标变成手的形状*/
+    cursor: pointer;
+}
+
+.lend-btn {
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    background: #d9d9d8;
+    padding: 8px 25px;
+    margin: 30px 0;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+#search_positionbox input {
+    width: 8%;
+}
+
+.delete-btn {
+    background: #ff2158;
+}
+
+.title-2 {
+    display: none;
+}
+
+#tablebox {
+    text-align: center;
+}
+
+#tablebox th{
+    text-align: center;
+}
+
+
+#mutilconditionbox {
+
+    font-size: 20px;
+}
+
+.condition a {
+
+    color: #000;
+    display: inline-block;
+    background: #fff;
+    opacity: 0.90;
+    border: 1px solid #000;
+    margin-bottom: 5px;
+    width: 8%;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+.condition input {
+    border-radius: 15px;
+    /*outline: 0;*/
+    text-align: center;
+    border: 1px;
+    margin-bottom: 7px;
+    transition: all 0.5s;
+}
+
+.condition input:focus {
+    background: #000;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.curr {
+    background: #66ccff !important;
+    color: white !important;
+    transform: scale(1.1);
+}
+
+#confirmbox {
+    margin-top: 3px;
+    text-align: center;
+}
+
+#pagingbox {
+    margin-top: 50px;
+}
+
+#addnewBikebox a {
+    color: #000;
+    display: inline-block;
+    background: #fff;
+    opacity: 0.90;
+    border: 1px solid #000;
+    margin: 10px;
+    width: 25%;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+#mutilconditionbox {
+    padding-left: 3%;
+}
+
+.btn-modify a {
+    color: #000;
+    display: inline-block;
+    background: #fff;
+    opacity: 0.90;
+    border: 1px solid #000;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    width: auto;
+    padding: 0 5px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+#modifybikeform {
+    padding: 15px;
+    font-size: 20px;
+}
+
+#modifybikeform input {
+    border-radius: 15px;
+    background: #666666;
+    text-align: center;
+    border: 1px;
+    margin-left: 15px;
+    width: 70px;
+    transition: all 0.5s;
+}
+
+#modifybikeform input:focus {
+    background: #000;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+#addnewbox {
+    color: #000;
+    display: inline-block;
+    background: #fff;
+    opacity: 0.90;
+    border: 1px solid #000;
+    margin: 10px;
+    width: 25%;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+#addnewbox:active {
+    transform: scale(0.9);
+    opacity: 0.75;
+    color: #fff;
+    background: #000;
+}
+
+#bikecodebox {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+#mutilconditionbox a:active {
+    background: #000;
+    transform: scale(0.9);
+    color: #fff;
+}
+
+#newbikeform {
+    margin: 30px;
+    font-size: 20px;
+}
+
+.tb-input {
+    border-radius: 15px;
+    background: #666666;
+    text-align: center;
+    border: 1px;
+    margin-left: 15px;
+    width: 70px;
+    transition: all 0.5s;
+}
+
+.tb-input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fff;
+}
+
+.tb-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+}
+
+.tb-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+
+.tb-input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fff;
+}
+
+.tb-input:focus {
+    background: #000;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+#newbikecode {
+    width: auto;
+    margin: 5px;
+    padding: 5px;
+}

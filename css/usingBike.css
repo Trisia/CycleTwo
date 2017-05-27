@@ -1,0 +1,115 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+}
+
+#resizetablebox {
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    border-radius: 15px;
+    margin: auto;
+
+    height: 75%;
+    width: 70%;
+    background-color: #faf1f2;
+    text-align: center;
+}
+
+#headbox {
+    height: 15%;
+}
+
+#unlend {
+    display: none;
+}
+
+#timeCount {
+    width: 35%;
+    margin: auto;
+    font-weight: bold;
+    color: white;
+    font-size: 55px;
+    background: #000000;
+    /*opacity: 0.5;*/
+    border-radius: 15px;
+}
+
+.smallsize {
+    font-size: 30px;
+}
+
+#sec {
+    position: relative;
+    top: -5px;
+    transition: all;
+    -webkit-animation: sec 1s infinite;
+    -o-animation: sec 1s infinite;
+    animation: sec 1s infinite;
+}
+
+@keyframes sec {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.title {
+    padding-top: 10%;
+}
+
+.switchInfo {
+    font-size: 20px;
+}
+.btn {
+    display: inline-block;
+    transition: all 0.3s;
+    background: #7AE0FF;
+    color: #000;
+    opacity: 0.90;
+    width: 60px;
+    height: 25px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.btn:active {
+    background: #000;
+    transform: scale(0.9);
+    color: #fff;
+}
+
+#returnbox {
+    margin-top: 20px;
+}
+
+#rbtime {
+    background: #000;
+    color: #fff;
+    border-radius: 15px;
+    font-weight: bold;
+    opacity: 0.75;
+    padding: 5px;
+}
+
+

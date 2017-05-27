@@ -1,0 +1,151 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+.col-class {
+    width: 15%;
+}
+
+.customer-table {
+    margin: auto;
+    border-radius: 15px;
+    width: 90%;
+}
+
+.content {
+    border-radius: 15px;
+    margin: 10px auto 0;
+
+    height: 75%;
+    width: 70%;
+    background-color: #faf1f2;
+}
+
+#pagingbox {
+    text-align: center;
+    height: 5%;
+}
+
+.layui-laypage :first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.layui-laypage *:last-child {
+    border-radius: 0 15px 15px 0 !important;
+}
+
+.layui-laypage em {
+    border-radius: 15px 15px 15px 15px !important;
+
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+}
+
+#headbox {
+    height: 15%;
+}
+
+#resizetablebox {
+    height: 85%;
+    width: 100%;
+}
+
+body .modal {
+    text-align: center;
+    opacity: 0.9;
+
+    border-radius: 15px !important;
+}
+
+.bikeInfoTable {
+    /*margin: 30px;*/
+    text-align: center;
+    background: #4d4d4d;
+    transition: all 0.3s ease 0s;
+}
+
+.bikeInfoTable:hover, .bikeInfoTable:hover #lend {
+    background: #09b2c6;
+    transition: all 0.3s ease 0s;
+}
+
+#lend:hover {
+    cursor: pointer;
+}
+
+.infobox {
+    background: #fff;
+    font-weight: bold;
+}
+
+.infobox ul li {
+    font-size: 15px;
+    font-weight: bold;
+    color: #777473;
+    padding: 10px 0;
+    border-bottom: 1px solid #d9d9d8;
+}
+
+.bikeInfo-heading {
+    padding: 20px 0;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+
+.price-value {
+    display: inline-block;
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 33px;
+    font-weight: bold;
+    color: #09b1c5;
+    transition: all 0.3s ease 0s;
+}
+
+.bikeInfoTable:hover .price-value {
+    color: #fff;
+}
+
+.btn-full {
+    border-radius: 15px;
+
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+
+    border: 0;
+    padding: 7px;
+    color: #FFFFFF;
+    font-size: 14px;
+
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    /*把鼠标变成手的形状*/
+    cursor: pointer;
+}
+
+.lend-btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #d9d9d8;
+    padding: 8px 25px;
+    margin: 30px 0;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.layui-layer-content{
+    width: 230px;
+    border-radius: 15px;
+}
